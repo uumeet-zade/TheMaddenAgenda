@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import portraitImage from '../assets/portrait.webp';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
@@ -42,7 +43,7 @@ export default function Home() {
             >
               <div className="absolute -inset-4 bg-brand-gold/20 blur-2xl z-0 rounded-full"></div>
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Joel_Kinnaman_SDCC_2015_%28cropped%29.jpg" 
+                src={portraitImage} 
                 alt="Governor Fredrick Madden" 
                 className="w-full h-auto object-cover aspect-[4/5] shadow-2xl relative z-10 rounded-sm grayscale-[20%] contrast-125"
                 style={{ objectPosition: 'center 20%' }}
