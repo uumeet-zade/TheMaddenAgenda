@@ -9,8 +9,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="relative isolate pt-40 pb-20 md:pt-56 md:pb-28 overflow-hidden">
         {/* Soft Background Gradients */}
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(255,179,0,0.15),rgba(255,255,255,0))]" />
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_60%_at_10%_40%,rgba(2,6,23,0.05),rgba(255,255,255,0))]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(44,94,59,0.15),rgba(255,255,255,0))]" />
         
         <div className="mx-auto w-full max-w-4xl px-5 md:px-10">
           <motion.h1 
@@ -19,7 +18,7 @@ export default function About() {
             transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
             className="font-plaak text-brand-navy text-6xl md:text-8xl lg:text-[8rem] font-black tracking-tighter leading-[0.85]"
           >
-            Tadashi Hayase
+            Fredrick Madden
           </motion.h1>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -29,59 +28,34 @@ export default function About() {
           >
             <span className="bg-brand-navy/30 h-px w-12 md:w-16 shrink-0" />
             <span className="font-basetica text-brand-navy/70 text-lg md:text-xl font-medium tracking-wide">
-              Candidate for Parliament, Reno · 2072
+              Governor of Reno · Re-election 2070
             </span>
           </motion.div>
         </div>
       </section>
 
       {/* Biography Content */}
-      <article className="mx-auto w-full max-w-3xl px-5 md:px-10 pb-32">
+      <article className="mx-auto w-full max-w-4xl px-5 md:px-10 pb-32">
         
         {/* Lead Paragraph */}
         <div className="border-b border-brand-navy/10 pb-10 mb-12">
           <p className="font-basetica text-brand-navy text-xl md:text-2xl leading-relaxed mb-6">
-            A son of working-class immigrants, a dedicated local leader, and a relentless advocate for Caprica's industrial towns, Tadashi Hayase has always placed <AnimatedHighlight delay={0.5}>hard work</AnimatedHighlight> and shared values at the center of his life. 
-          </p>
-          <p className="font-basetica text-brand-navy text-xl md:text-2xl leading-relaxed">
-            Throughout his public service, one conviction has remained absolute: Caprica's true strength does not come from distant boardrooms or extreme ideologies, but from the families, workers, and local communities that form the backbone of our nation.
+            An economist by trade and a public servant by choice, Fredrick Madden has dedicated his career to forging a pragmatic path forward through Green Liberalism and educational excellence.
           </p>
         </div>
 
-        {/* Section 1 */}
+        {/* Section 1: Brief Background */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-plaak text-brand-navy text-3xl md:text-4xl font-bold tracking-tight mb-6">
-            Roots in Miyamoto, Raised in Reno
+          <h2 className="font-plaak text-brand-navy text-3xl md:text-4xl font-bold tracking-tight mb-6 uppercase">
+            A Pragmatic Approach
           </h2>
           <p className="font-basetica text-brand-navy/80 text-lg leading-[1.8] mb-6">
-            Tadashi's parents emigrated from Miyamoto, Izumo, arriving in Caprica with little more than a fierce determination to build a better life. They settled in the industrial heartland, where they taught him that respect is earned, not given, and that prosperity is built by human hands.
-          </p>
-          <p className="font-basetica text-brand-navy/80 text-lg leading-[1.8] mb-6">
-            Growing up in a blue-collar neighborhood, Tadashi learned early on that <AnimatedHighlight delay={0.2}>opportunity is a byproduct of effort</AnimatedHighlight>. He witnessed firsthand the struggles of working families trying to keep pace with a changing economy, and the pride of tradesmen who literally built the city around them.
-          </p>
-        </motion.div>
-
-        {/* Section 2 */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="mt-16"
-        >
-          <h2 className="font-plaak text-brand-navy text-3xl md:text-4xl font-bold tracking-tight mb-6">
-            A Voice for the Working Class
-          </h2>
-          <p className="font-basetica text-brand-navy/80 text-lg leading-[1.8] mb-6">
-            Unwilling to accept that the working class should be left behind by modern progress, Tadashi entered local politics. He quickly gained a reputation as a pragmatic problem-solver who cared more about results than rhetoric. 
-          </p>
-          <p className="font-basetica text-brand-navy/80 text-lg leading-[1.8] mb-6">
-            As a local leader, he fought tirelessly for <AnimatedHighlight delay={0.2}>strong localism</AnimatedHighlight>—ensuring that communities retained control over their own zoning laws, schools, and cultural heritage. He spearheaded initiatives to protect local trades, heavily deregulate burdensome municipal codes that hurt small businesses, and champion family values that keep neighborhoods safe and tightly knit.
+            Fredrick Madden is an economist and a founding member of the Democratic Greens of Caprica. As Governor of Reno, he has built a reputation for market-oriented Green Liberalism - demonstrating that environmental progress and economic growth go hand-in-hand when guided by smart, targeted incentives and voluntary market solutions.
           </p>
         </motion.div>
 
@@ -93,30 +67,48 @@ export default function About() {
           transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
           className="my-16 border-l-4 border-brand-gold pl-6 md:pl-8 py-2"
         >
-          <blockquote className="font-plaak text-brand-navy text-3xl md:text-4xl font-bold leading-tight mb-4">
-            "A strong Caprica isn't built from the top down. It's built block by block, family by family, by the people who work its factories and walk its streets."
+          <blockquote className="font-plaak text-brand-navy text-3xl md:text-4xl font-bold leading-tight mb-4 uppercase">
+            "I have always believed that the strongest economy is one that gives people choices and gives them opportunities. We must ensure that the road is open and Renoites are trusted to build their future."
           </blockquote>
           <figcaption className="font-basetica text-brand-navy/60 text-sm font-bold tracking-widest uppercase">
-            Tadashi Hayase, 2072 Campaign Launch
+            Governor Fredrick Madden
           </figcaption>
         </motion.figure>
 
-        {/* Section 3 */}
+        {/* Section 2: Legislative Record */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-plaak text-brand-navy text-3xl md:text-4xl font-bold tracking-tight mb-6">
-            Balanced Growth & A Shared Future
+          <h2 className="font-plaak text-brand-navy text-3xl md:text-4xl font-bold tracking-tight mb-6 uppercase">
+            A Record of Delivery
           </h2>
-          <p className="font-basetica text-brand-navy/80 text-lg leading-[1.8] mb-6">
-            Today, Caprica stands at a crossroads. We face a choice between the extreme ideologies that seek to divide us, and a pragmatic path forward rooted in shared constitutional values. Tadashi is running for Parliament to restore balance to our economic growth.
+          <p className="font-basetica text-brand-navy/80 text-lg leading-[1.8] mb-8">
+            During his first term, Governor Madden worked to dismantle unnecessary barriers and invest strategically in Reno's future. His hallmark legislative achievements include:
           </p>
-          <p className="font-basetica text-brand-navy/80 text-lg leading-[1.8] mb-6">
-            His platform rejects the idea that a thriving economy must come at the expense of local communities. By embracing a <AnimatedHighlight delay={0.2}>balanced economic plan</AnimatedHighlight>, he envisions a future where free enterprise flourishes alongside strong community protections, where the working class is the priority, and where every citizen has the freedom to forge their own destiny.
-          </p>
+
+          <ul className="space-y-6 font-basetica text-brand-navy/80 text-lg leading-[1.8]">
+            <li className="flex gap-4">
+              <span className="text-brand-gold mt-1">■</span>
+              <div>
+                <strong className="text-brand-navy">Clean Commercial Transition Act of 2069:</strong> Created voluntary, market-driven incentives - including a 25% tax credit - for businesses upgrading to energy-efficient infrastructure and transitioning fleets to zero-emission vehicles.
+              </div>
+            </li>
+            <li className="flex gap-4">
+              <span className="text-brand-gold mt-1">■</span>
+              <div>
+                <strong className="text-brand-navy">Higher Education & Research Commission Act of 2069:</strong> Established a specialized commission to evaluate and plan the foundations for Reno's very own higher education and research network, preparing the Margraviate for the economy of tomorrow.
+              </div>
+            </li>
+            <li className="flex gap-4">
+              <span className="text-brand-gold mt-1">■</span>
+              <div>
+                <strong className="text-brand-navy">Innovation & Regulatory Reform Act of 2069:</strong> Modernized Reno's regulatory system by creating the Reno Regulatory Board and a Regulatory Sandbox Program, dramatically streamlining business licensing and reducing bureaucratic friction for local entrepreneurs.
+              </div>
+            </li>
+          </ul>
         </motion.div>
         
       </article>

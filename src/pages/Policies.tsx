@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 import AnimatedHighlight from '../components/AnimatedHighlight';
 
@@ -21,34 +20,24 @@ export default function Policies() {
 
   const policies = [
     { 
-      id: "balanced-economy",
-      title: "Balanced Economy & Labor", 
-      desc: "A strong free-market depends on fair play. We support trade unions and reject excessive taxation, ensuring prosperity reaches the working class. Our approach guarantees balanced budgets and lower taxes without stripping workers of their rights, ensuring a robust free market." 
+      id: "green-liberalism",
+      title: "Green Liberalism", 
+      desc: "True sustainability is achieved through innovation and enterprise. We rely on market-oriented green policies, de-regulation of the green market, and voluntary tax incentives like the Green Housing Tax Incentive Act to encourage the private market to invest in a clean energy economy." 
     },
     { 
-      id: "sustainable-localism",
-      title: "Sustainable Localism", 
-      desc: "Protecting Reno's natural environment is essential, but it must be balanced with our industrial needs. Clean manufacturing is our future. We will empower our suburban homeowners by keeping local zoning decisions local and promoting stability in our communities." 
+      id: "higher-education",
+      title: "Higher Education", 
+      desc: "Our universities should be engines of growth. We are establishing an organized higher education system in Reno and encouraging pathways for private investment into university construction to ensure world-class facilities and programs." 
     },
     { 
-      id: "veterans-security",
-      title: "Veterans & Security First", 
-      desc: "Reno is home to thousands of proud veterans. We believe in uncompromising support for those who served. A secure nation starts at the community level, honoring our commitment to a strong defense and shared values." 
+      id: "stem",
+      title: "STEM & Opportunity", 
+      desc: "To prepare Reno's workforce for the jobs of tomorrow, we are building a subsidized STEM program that guarantees accessible training in technology and science. Furthermore, we are committed to establishing affordable tuition rates for low-income students." 
     },
     { 
-      id: "merit-based-immigration",
-      title: "Merit-Based Immigration", 
-      desc: "As the son of Izuman migrants, Tadashi believes in an immigration system that rewards skill, contribution, and shared Caprican values. We must move past ethnic or religious divisions and embrace those who contribute to the constitutional values of Caprica." 
-    },
-    {
-      id: "urban-suburban-integration",
-      title: "Urban-Suburban Integration",
-      desc: "Abilene is a modern financial hub that must work in tandem with our vast suburbs. We will bridge the gap between the suburban residential areas and the city's commercial hubs, ensuring our urban population and renters have strong representation while maintaining suburban integrity."
-    },
-    {
-      id: "vocational-training",
-      title: "Vocational Training & Innovation",
-      desc: "A thriving industrial sector requires a skilled workforce. We will prioritize technical education and apprenticeships, ensuring our youth can secure high-paying careers in trades and manufacturing without the burden of excessive debt."
+      id: "public-schools",
+      title: "Public Schooling", 
+      desc: "A prosperous state begins with its youngest citizens. Governor Madden is dedicating significant investments in Reno Public Schooling, upgrading facilities and resources so that every child, regardless of zip code, receives a foundational education." 
     }
   ];
 
@@ -60,12 +49,12 @@ export default function Policies() {
         transition={{ duration: 0.6 }}
         className="text-center mb-16"
       >
-        <p className="font-basetica font-bold tracking-widest uppercase text-xs mb-4 text-brand-gold">Our Platform</p>
+
         <h1 className="font-plaak font-black uppercase text-5xl md:text-7xl text-brand-navy tracking-tight">
-          <AnimatedHighlight delay={0.3}>Our Foundation</AnimatedHighlight>
+          The Madden Agenda
         </h1>
         <p className="mt-6 text-xl font-basetica text-brand-steel max-w-2xl mx-auto">
-          A comprehensive plan for balanced economic growth, strong localism, and shared constitutional values.
+          A focused plan combining market-oriented sustainability with comprehensive educational investments for a prosperous Reno.
         </p>
       </motion.div>
 
@@ -96,7 +85,7 @@ export default function Policies() {
       <div className="mt-20 bg-brand-navy rounded-3xl p-12 text-center text-brand-white">
         <h2 className="font-plaak font-bold text-4xl mb-6">Ready to support the movement?</h2>
         <p className="font-basetica text-brand-white/80 max-w-2xl mx-auto mb-8 text-lg">
-          Join thousands of other working and middle-class Capricans in securing prosperity for Reno.
+          Join thousands of other citizens in securing a second term of prosperity for Reno.
         </p>
         <button className="bg-brand-gold text-brand-navy px-10 py-4 rounded-full font-basetica font-bold hover:brightness-110 transition-colors text-lg">
           Volunteer Today

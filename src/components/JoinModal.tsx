@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle2 } from 'lucide-react';
 
@@ -34,25 +35,32 @@ export default function JoinModal({ isOpen, onClose }: JoinModalProps) {
     onClose();
   };
 
-  return (
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
+
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+        <div className="fixed inset-0 z-[100]">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={handleClose}
-            className="absolute inset-0 bg-brand-navy/60 backdrop-blur-sm"
+            className="fixed inset-0 bg-brand-navy/60 backdrop-blur-sm"
           />
 
-          {/* Modal Content */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative w-full max-w-md bg-brand-white rounded-3xl shadow-2xl overflow-hidden"
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 sm:p-6 text-center">
+              {/* Modal Content */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                className="relative w-full max-w-md transform overflow-hidden rounded-3xl bg-brand-white text-left align-middle shadow-2xl transition-all my-8"
           >
             {/* Close Button */}
             <button 
@@ -79,7 +87,7 @@ export default function JoinModal({ isOpen, onClose }: JoinModalProps) {
                   Welcome aboard{name ? `, ${name}` : ''}!
                 </h3>
                 <p className="font-basetica text-brand-navy/70 text-lg">
-                  Thank you for joining the campaign. Together, we'll build a stronger Caprica.
+                  Thank you for joining the campaign. Together, we'll build a stronger Reno.
                 </p>
               </motion.div>
             ) : (
@@ -103,7 +111,7 @@ export default function JoinModal({ isOpen, onClose }: JoinModalProps) {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         className="w-full px-4 py-3 rounded-xl bg-brand-light border border-brand-navy/10 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition-all font-basetica text-brand-navy placeholder:text-brand-navy/30"
-                        placeholder="Tadashi"
+                        placeholder="Fredrick"
                       />
                     </div>
                     <div>
@@ -112,7 +120,7 @@ export default function JoinModal({ isOpen, onClose }: JoinModalProps) {
                         type="text" 
                         required
                         className="w-full px-4 py-3 rounded-xl bg-brand-light border border-brand-navy/10 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition-all font-basetica text-brand-navy placeholder:text-brand-navy/30"
-                        placeholder="Hayase"
+                        placeholder="Madden"
                       />
                     </div>
                   </div>
@@ -158,8 +166,11 @@ export default function JoinModal({ isOpen, onClose }: JoinModalProps) {
               </div>
             )}
           </motion.div>
+            </div>
+          </div>
         </div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 }

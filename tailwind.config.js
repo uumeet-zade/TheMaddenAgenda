@@ -7,11 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'brand-navy': '#3D151B', // Rich Dark Burgundy (replaces navy)
+        'brand-navy': '#1E4620', // Meadow Green
         'brand-white': '#FDFBF7', // Warm Cream
-        'brand-gold': '#D4AF37', // Elegant Metallic Gold
-        'brand-steel': '#8C777A', // Muted Rose-Taupe (replaces steel)
-        'brand-light': '#F4EFEA', // Warm Beige Background
+        'brand-gold': '#D4AF37', // Gold
+        'brand-steel': '#6B8E70', // Muted Meadow
+        'brand-light': '#F0F4F1', // Light Mint/Beige
       },
       fontFamily: {
         basetica: ['Inter', 'sans-serif'],
